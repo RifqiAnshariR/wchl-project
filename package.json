@@ -1,0 +1,16 @@
+{
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "name": "web3-anonmessage-app",
+  "scripts": {
+    "setup": "npm run setup --workspaces --if-present",
+    "start": "npm run start --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "type": "module",
+  "workspaces": [
+    "src/web3-anonmessage-app-frontend"
+  ]
+}

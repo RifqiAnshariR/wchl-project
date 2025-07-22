@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "web3-anonmessage-app-backend": {
+      "main": "src/web3-anonmessage-app-backend/main.mo",
+      "type": "motoko"
+    },
+    "web3-anonmessage-app-frontend": {
+      "dependencies": [
+        "web3-anonmessage-app-backend"
+      ],
+      "source": [
+        "src/web3-anonmessage-app-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "web3-anonmessage-app-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

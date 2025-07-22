@@ -1,0 +1,28 @@
+{
+  "name": "web3-anonmessage-app-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && npm run build",
+    "start": "vite --port 3000",
+    "prebuild": "dfx generate web3-anonmessage-app-backend",
+    "build": "vite build",
+    "format": "prettier --write \"src/**/*.{json,js,jsx,css,scss}\""
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "cross-fetch": "^3.1.6",
+    "dotenv": "^16.3.1",
+    "sass": "^1.63.6",
+    "vite": "^4.3.9",
+    "vite-plugin-environment": "^1.1.3",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.1.3",
+    "@dfinity/candid": "^2.1.3",
+    "@dfinity/principal": "^2.1.3",
+    "@dfinity/auth-client": "^2.4.1"
+  }
+}
