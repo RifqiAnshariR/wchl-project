@@ -1,19 +1,16 @@
-// SCSS - Cleaned and Organized Version
-
-// ===== GLOBAL RESET =====
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// ===== BODY & CONTAINER =====
+// ===== Body and Container =====
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #2c3e50;
   min-height: 100vh;
   line-height: 1.6;
-  background: #f4f4f4;
+  background: #565656;
 }
 
 .container {
@@ -25,7 +22,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-// ===== COMMON COMPONENTS =====
+// ===== Common Components =====
 .logo-large {
   width: 120px;
   display: block;
@@ -84,14 +81,13 @@ body {
   z-index: 1000;
 }
 
-// ===== SCREEN LAYOUTS =====
 .login-screen,
 .home-screen,
 .chat-screen {
   display: none;
 }
 
-// ===== LOGIN SCREEN =====
+// ===== Login Section =====
 .login-screen {
   text-align: center;
 }
@@ -101,7 +97,7 @@ body {
   margin: 0 auto;
 }
 
-// ===== HOME SCREEN =====
+// ===== Home Section =====
 .home-buttons {
   display: flex;
   justify-content: center;
@@ -137,7 +133,7 @@ body {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-// ===== CHAT SCREEN =====
+// ===== Chat Section =====
 .chat-header {
   display: flex;
   justify-content: space-between;
@@ -180,7 +176,7 @@ body {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-// ===== UTILITY CLASSES =====
+// ===== Utility =====
 .error {
   background: #f8d7da;
   color: #721c24;
