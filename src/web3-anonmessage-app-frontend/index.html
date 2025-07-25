@@ -3,26 +3,66 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anonymous Messages</title>
+  <title>Anonymous Chat</title>
 </head>
 
 <body>
-  <main>
-    <img src="src/logo.svg" alt="DFINITY logo" class="logo"/>
-    <br/>
-    <h1>Anonymous Messages</h1>
-    <div class="browser-warning">
-      ⚠️ If this page appears broken, try reloading. If the problem persists, try switching browsers; Chrome or
-      Firefox are recommended.
+  <div class="browser-warning">
+    ⚠️ If this page appears broken, try reloading. If the problem persists, try switching browsers; Chrome or Firefox are recommended.
+  </div>
+
+  <div id="spinner" style="display: none;">Loading...</div>
+
+  <div class="container">
+    <!-- ===== Login Screen ===== -->
+    <div id="loginScreen" class="login-screen">
+      <img src="src/logo.svg" alt="Logo" class="logo-large" />
+      <p class="subtext">Login with Internet Identity to create chat rooms</p>
+      <button id="loginBtn" class="btn">Login with Internet Identity</button>
     </div>
-    <textarea id="messageInput" placeholder="Tulis pesanmu..."></textarea><br/>
-    <button id="submitBtn">Kirim Pesan</button>
-    <h2>Pesan Tersimpan:</h2>
-    <ul id="messageList"></ul>
-  </main>
+
+    <!-- ===== Home Screen ===== -->
+    <div id="homeScreen" class="home-screen">
+      <img src="src/logo.svg" alt="Logo" class="logo-large" />
+      <div class="home-buttons">
+        <button id="createRoomBtn" class="btn">Create New Room</button>
+        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+      </div>
+      <br>
+      <div id="roomList" class="room-list">
+        <div class="loading">Loading your rooms...</div>
+      </div>
+      <br>
+      <div>
+        <p class="subtext">Or join an existing chat room:</p>
+        <form id="joinRoomForm" class="join-section">
+          <input type="text" id="roomIdInput" class="room-input" placeholder="Enter room ID" />
+          <button type="submit" class="btn">Join!</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== Chat Screen ===== -->
+    <div id="chatScreen" class="chat-screen">
+      <img src="src/logo.svg" alt="Logo" class="logo-large" />
+      <div class="chat-header">
+        <h2 id="chatTitle">Chat Room</h2>
+        <button id="backHomeBtn" class="btn btn-secondary">Back to Home</button>
+      </div>
+      <div id="messages" class="messages">
+        <div class="loading">Loading messages...</div>
+      </div>
+      <form id="messageForm" class="message-form">
+        <input type="text" id="messageInput" class="message-input" placeholder="Type your anonymous message..." required />
+        <button type="submit" class="btn">Send!</button>
+      </form>
+    </div>
+
+    <div id="error" class="error" style="display: none;"></div>
+  </div>
 
   <script type="module" src="src/main.js"></script>
 </body>
-
 </html>
